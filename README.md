@@ -43,6 +43,11 @@
 配合 [windows-mcp](https://pypi.org/project/windows-mcp/) MCP 服务器操控 Windows 的操作方法论：鼠标点击、键盘输入、快捷键、截图回看、窗口管理、滚动拖拽、剪贴板、进程/注册表。
 **用途/触发**：任何需要操作原生 Windows 应用/桌面的任务。
 
+### vision-forensics —— 视觉取证（自研）
+让模型"看图"并据图行动的工作流，核心纪律：**任何视觉读数在像素定量复核之前都只是假设**。把看图拆成四类流程——看图问答（裁剪优先、CDN 时效管理）、图像取证对比（视觉报的缺陷必须 numpy 全分辨率复核，复核不过直接驳回）、设计稿/截图→前端代码（切栅格逐区提取、生成后逐区像素 diff 验收）、GUI 自动化（定位→换算→操作→闭环截图）。grounding 输出强制带原始分辨率像素坐标与证据。
+**用途/触发**：看截图、视觉验收、两图找差异、设计稿还原代码、屏幕找控件。
+由本机视觉取证实战管线与 [Anionex/agent-vision-toolkit](https://github.com/Anionex/agent-vision-toolkit) 的结构化任务拆分、grounding 坐标证据规范融合而成（去除了外部 API 依赖与应用绑定）。
+
 ## skills/cad/ —— CAD 自动化
 
 ### cad-automation —— CAD 自动绘图 v1.1.0（自研）
@@ -68,6 +73,11 @@
 ### archify —— 可验证的图表（MIT）
 生成**可验证**的架构图/工作流图/时序图/数据流图/生命周期图：自包含 HTML、带动效、可导出；自带渲染器、布局修复与校验脚本（需本地 Node.js）。
 来源：[tt-a1i/archify](https://github.com/tt-a1i/archify) · MIT
+
+### scroll-craft —— 滚动叙事落地页（MIT，选择性调用）
+高端滚动驱动网页：先规划访客旅程、页面文法、情绪峰值和"专属签名动效"，再做带独立视觉层的三维 Hero、克制的动效、独立的移动端构图。支持用现有照片/视频素材或生成写实素材。
+**⚠️ 选择性调用**——只用于：营销主页、产品发布页、作品集、餐饮/服务品牌页这类"要讲故事"的页面。普通后台、文档页、表单页**不要**叫它，普通的用 ui-ux-pro-max 就够。
+来源：[nateherkai/scroll-craft](https://github.com/nateherkai/scroll-craft) · MIT
 
 ## docs/ —— 实战蒸馏
 
