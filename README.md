@@ -43,7 +43,7 @@
 配合 [windows-mcp](https://pypi.org/project/windows-mcp/) MCP 服务器操控 Windows 的操作方法论：鼠标点击、键盘输入、快捷键、截图回看、窗口管理、滚动拖拽、剪贴板、进程/注册表。
 **用途/触发**：任何需要操作原生 Windows 应用/桌面的任务。
 
-### vision-forensics —— 视觉取证（自研）
+### vision-forensics —— 视觉取证（自研，多 Agent 评审修订版）
 让模型"看图"并据图行动的工作流，核心纪律：**任何视觉读数在像素定量复核之前都只是假设**。把看图拆成四类流程——看图问答（裁剪优先、CDN 时效管理）、图像取证对比（视觉报的缺陷必须 numpy 全分辨率复核，复核不过直接驳回）、设计稿/截图→前端代码（切栅格逐区提取、生成后逐区像素 diff 验收）、GUI 自动化（定位→换算→操作→闭环截图）。grounding 输出强制带原始分辨率像素坐标与证据。
 **用途/触发**：看截图、视觉验收、两图找差异、设计稿还原代码、屏幕找控件。
 由本机视觉取证实战管线与 [Anionex/agent-vision-toolkit](https://github.com/Anionex/agent-vision-toolkit) 的结构化任务拆分、grounding 坐标证据规范融合而成（去除了外部 API 依赖与应用绑定）。
