@@ -34,7 +34,7 @@ Node.js ≥22 标准库零第三方依赖（`node:http` + `node:sqlite` + `node:
 | 7 | 降级兜底（S0/S1 双层能力） | 每个 AI 调用点预设一条确定性降级路径 | "AI 缺席时闭环不断"——断网、额度耗尽、评审现场都能用 | 设计模式，见下文模式 4 |
 | 8 | 桌面自动化 | 截屏、点击、键盘、窗口管理 | 成绩系统/排课系统没有 API，桌面自动化是最后一公里 | **本仓库 `skills/windows-mcp`**（pypi: `windows-mcp`） |
 | 9 | 浏览器自动化 | 打开网页、填表、截图、提取数据 | 教育平台下载试卷、查成绩、填报表的高频操作 | npm `@playwright/mcp`（Microsoft 官方）；Python: browser-use |
-| 10 | 记忆/上下文管理 | 跨会话长期记忆（学生画像、教学偏好） | 记住"这个班计算弱""这位老师偏好任务群教学"才能越用越顺手 | `@modelcontextprotocol/server-memory`；mem0（`pip install mem0ai`）；连续情绪/关系层参考本仓库 `skills/mood` |
+| 10 | 记忆/上下文管理 | 跨会话长期记忆（学生画像、教学偏好） | 记住"这个班计算弱""这位老师偏好任务群教学"才能越用越顺手 | `@modelcontextprotocol/server-memory`；mem0（`pip install mem0ai`） |
 | 11 | 图片生成/图表 | 函数图像、思维导图、统计图 | 教案与课件里的视觉元素 | matplotlib / Pillow（pip） |
 
 ## 三、可复用的 5 个工程模式（本项目最值钱的部分）

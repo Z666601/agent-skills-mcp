@@ -13,7 +13,6 @@
 | windows-mcp | Windows 桌面自动化操作流程：配合 windows-mcp MCP 服务器控制鼠标/键盘/窗口/截图/注册表 |
 | cad-automation | 驱动 AutoCAD/中望/浩辰自动画图：pyautocad、win32com、AutoLISP、C#、VBA，批量处理与标注 v1.1.0 |
 | cad-designer | CAD 设计指导：制图规范（国标）、图层/标注标准、参数化思路、批量出图策略 v1.1.0 |
-| mood | 跨会话情绪状态层：PAD 三维（愉悦/唤醒/支配）+ 信任系数 + 时间衰减，agent 心情有连续性。引擎只记账（state.py），情绪判断由模型自己做 |
 
 ## docs/ —— 实战蒸馏
 
