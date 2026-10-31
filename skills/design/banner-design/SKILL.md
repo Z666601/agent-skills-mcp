@@ -1,6 +1,6 @@
 ---
 name: banner-design
-description: "Design banners for social media, ads, website heroes, creative assets and print; several art directions, optional generated or supplied visuals. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, web hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage."
+description: "Design banners for social media, ads, website heroes, creative assets and print; several art directions, optional generated or supplied visuals. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, web hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage. 投放用横幅/广告图/社媒图用本技能；纯静态艺术作品、海报用 canvas-design。"
 argument-hint: "[platform] [style] [dimensions]"
 license: MIT
 metadata:
