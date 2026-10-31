@@ -4,80 +4,81 @@
 
 每个技能是一个文件夹，放进 `~/.agents/skills/` 即被 agent 发现并按需加载（读取其中 `SKILL.md` 的 frontmatter）。
 
-## skills/writing/ —— 写作与文档
+本仓库是私有主库的分类镜像，只收录能公开的技（自研 + MIT / Apache-2.0 / BSD 第三方）。改动记录见 [MODIFICATIONS.md](MODIFICATIONS.md)。
 
-### beautiful-article —— 文章美化（MIT）
-把网页 URL / PDF / DOCX / Markdown / 截图等素材，编辑设计成一篇可离线打开和分享的**单文件 HTML 网页长文**。基于 reacticle 语义组件协议——不手写裸 HTML/CSS，而是"语义组件 + 主题约束的自由层"，按"素材→规划→双确认→生成→终审→修复"的 harness 流程推进，默认 100% 信息保留。
-**用途/触发**："把这篇做成网页文章 / 生成一篇可分享的 HTML 长文 / render this as a beautiful web article"。适合公众号长文、教程、 briefing、方案分析的可视化交付。只做文章，不做后台/dashboard。
-来源：[ConardLi/garden-skills](https://github.com/ConardLi/garden-skills) · MIT
+## 技能清单
 
-### lieflat-gongwen —— 公文写作 DNA（PolyForm NC 1.0.0，非商业）
-基于真实公文**全量统计**的公文内容写作技能（管"写什么、怎么写"，不管排版）。分公文族与党建族两族：调研报告 / 领导讲话 / 工作意见 / 经验材料 / 工作方案 / 经验总结六类公文文体，加千字级党建与基层经验材料。提供**可验收的数值参数**（段落配比、句长等）、骨架公式、标题技法，并带自动化自检脚本。
-**用途/触发**："写一篇调研报告 / 起草领导讲话 / 写份工作意见 / 让这篇稿子更有公文味 / 检查这篇公文的参数对不对"。
-来源：[larashero3-dotcom/lieflat-gongwen](https://github.com/larashero3-dotcom/lieflat-gongwen) · ⚠️ 非商业许可证，商用需获授权
+### skills/agent-eng/ —— 智能体工程
 
-### thesis-creator —— 毕业论文全流程（MIT）
-面向中国本科生的毕业论文辅助系统：从选题到交稿的端到端工作流，含**降重优化、AIGC 痕迹降低和本地检测**。
-**用途/触发**："帮我写论文 / 帮我降重"。
-来源：[Stars-OC/thesis-creator](https://github.com/Stars-OC/thesis-creator) · MIT
+| 技能 | 一句话 | 来源 / 许可 |
+| --- | --- | --- |
+| [agent-cli-headless](skills/agent-eng/agent-cli-headless) | 无人值守驱动 agent CLI：确切命令、环境变量坑、授权陷阱 | 自研 |
+| [link-verify](skills/agent-eng/link-verify) | 引用链接取证：只读 GET 落盘 HTTP 状态/字节/magic/正文特征，判九值枚举，证据可离线复判 | 自研 |
+| [skill-manager](skills/agent-eng/skill-manager) | 技能库审计（包装 asm CLI）：常驻 token 开销、重复安装、启用/禁用 | 自研 |
+| [vision-forensics](skills/agent-eng/vision-forensics) | 视觉取证四流程；视觉读数必须过像素定量复核才可作改动依据 | 自研（灵感：[Anionex/agent-vision-toolkit](https://github.com/Anionex/agent-vision-toolkit)） |
+| [win-window-shot](skills/agent-eng/win-window-shot) | 悬浮窗可见性取证：PrintWindow 抓被遮挡窗口真实像素 + "它真在屏幕上吗"的定点像素证据 | 自研 |
+| [windows-mcp](skills/agent-eng/windows-mcp) | 配合 windows-mcp MCP 服务器的 Windows 桌面操作方法论（含焦点纪律、对话框驱动） | 自研 |
+| [xlsx-cell-diff](skills/agent-eng/xlsx-cell-diff) | xlsx 逐格改前改后取证 + 单表结构机检，退出码当流水线门禁 | 自研 |
 
-**写作方向更多推荐（只给链接）**：[Tomsawyerhu/Chinese-WebNovel-Skill](https://github.com/Tomsawyerhu/Chinese-WebNovel-Skill)（833★，中文网文写作，无许可证）· [KaguraNanaga/official-document-writing-skill](https://github.com/KaguraNanaga/official-document-writing-skill)（296★，GB/T 9704 公文结构化写作，MIT）· [mizzlelover/gongwen-gbt9704-skill](https://github.com/mizzlelover/gongwen-gbt9704-skill)（本人在用的 GB/T 9704 公文**排版**技能，管格式不管内容）
+### skills/design/ —— 设计与视觉
 
-## skills/coding-style/ —— 编码与输出风格
+| 技能 | 一句话 | 来源 / 许可 |
+| --- | --- | --- |
+| [archify](skills/design/archify) | 可验证的架构/流程/时序/数据流/生命周期/ERD/类图/树/时间线图，自包含 HTML 带动效可导出 | [tt-a1i/archify](https://github.com/tt-a1i/archify) · Apache-2.0 |
+| [banner-design](skills/design/banner-design) | 横幅/营销图设计子技能 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) · MIT |
+| [draw-your-font](skills/design/draw-your-font) | 把一张手写照片做成可安装字体（TTF/WOFF/WOFF2） | MIT（著作权人见仓库 LICENSE） |
+| [frontend-design](skills/design/frontend-design) | 前端视觉语言与审美方向，克制模板化默认样式；与 impeccable 配对 | [anthropics/skills](https://github.com/anthropics/skills) · Apache-2.0 |
+| [impeccable](skills/design/impeccable) | 前端设计质量 v4.8.0：设计规范、命令手册、反模式检测、live 浏览器迭代 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) · Apache-2.0 |
+| [scroll-craft](skills/design/scroll-craft) | 滚动叙事沉浸式落地页（只用于营销页/发布页/作品集，普通后台别叫它） | [nateherkai/scroll-craft](https://github.com/nateherkai/scroll-craft) · MIT |
+| [slides](skills/design/slides) | 幻灯片/课件设计子技能 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) · MIT |
+| [text-swap](skills/design/text-swap) | 图片上取字填字：擦掉旧文字/手迹、贴上新文字 | 自研 |
+| [ui-ux-pro-max](skills/design/ui-ux-pro-max) | UI/UX 设计主技能：风格/配色/字体/UX 规则的可检索知识库 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) · MIT |
 
-### ponytail —— 懒惰高级工程师（自研）
-强制最简可行方案的编码风格：标准库/平台原生优先、最短可用 diff、YAGNI（不值得做的不做）；lite/full/ultra 三档强度。红线：输入校验、防数据丢失的错误处理和安全不做简化。
-**用途/触发**：任何写代码/改代码/评审/技术选型的任务。
+### skills/writing/ —— 写作与文档
 
-### caveman —— 原始人腔省 token（Apache-2.0）
-"why use many token when few token do trick"——把输出压到最省的说话风格，实测砍约 65% 输出 token。与 ponytail 是官配（ponytail 文档明写 "pair with Caveman"）：一个管懒，一个管省。
-来源：[JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) · Apache-2.0
+| 技能 | 一句话 | 来源 / 许可 |
+| --- | --- | --- |
+| [thesis-creator](skills/writing/thesis-creator) | 本科毕业论文全流程：选题→交稿，含降重、AIGC 痕迹降低与本地检测 | [Stars-OC/thesis-creator](https://github.com/Stars-OC/thesis-creator) · MIT |
 
-## skills/agent-eng/ —— 智能体工程
+### skills/coding-style/ —— 编码与输出风格
 
-### skill-manager —— 技能库审计（自研）
-包装 [agent-skill-manager](https://www.npmjs.com/package/agent-skill-manager)（asm）CLI：统计常驻 token 开销、找重复安装与功能重叠、评估"不值得常驻"的技能、禁用/恢复。附 Windows 实测踩坑记录（customPaths bug、官方插件缓存红线）。
-**用途/触发**："技能太多 / 审计技能 / 省上下文"。
+| 技能 | 一句话 | 来源 / 许可 |
+| --- | --- | --- |
+| [caveman](skills/coding-style/caveman) | "原始人腔"省 token：砍约 65% 输出，lite/full/ultra + wenyan 四档 | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) · Apache-2.0 |
 
-### windows-mcp —— Windows 桌面自动化流程（自研）
-配合 [windows-mcp](https://pypi.org/project/windows-mcp/) MCP 服务器操控 Windows 的操作方法论：鼠标点击、键盘输入、快捷键、截图回看、窗口管理、滚动拖拽、剪贴板、进程/注册表。
-**用途/触发**：任何需要操作原生 Windows 应用/桌面的任务。
+## 本镜像与私有主库的差异：不含哪些、为什么
 
-### vision-forensics —— 视觉取证（自研，多 Agent 评审修订版）
-让模型"看图"并据图行动的工作流，核心纪律：**任何视觉读数在像素定量复核之前都只是假设**。把看图拆成四类流程——看图问答（裁剪优先、CDN 时效管理）、图像取证对比（视觉报的缺陷必须 numpy 全分辨率复核，复核不过直接驳回）、设计稿/截图→前端代码（切栅格逐区提取、生成后逐区像素 diff 验收）、GUI 自动化（定位→换算→操作→闭环截图）。grounding 输出强制带原始分辨率像素坐标与证据。
-**用途/触发**：看截图、视觉验收、两图找差异、设计稿还原代码、屏幕找控件。
-由本机视觉取证实战管线与 [Anionex/agent-vision-toolkit](https://github.com/Anionex/agent-vision-toolkit) 的结构化任务拆分、grounding 坐标证据规范融合而成（去除了外部 API 依赖与应用绑定）。
+镜像来自私有主库 `skills/` 全量目录（83 个），按"能公开"筛掉 65 个。三类原因：
 
-## skills/cad/ —— CAD 自动化
+**1. 许可证不允许再分发或不在白名单**
 
-### cad-automation —— CAD 自动绘图 v1.1.0（自研）
-驱动 AutoCAD（兼容中望、浩辰）二次开发：Python（pyautocad/win32com）、AutoLISP、C#、VBA 连接 CAD 画图改图、图层管理、标注、块与属性、三维建模、批量处理、文件转换。管"写代码把图画出来"。
+| 技能 | 原因 |
+| --- | --- |
+| mcp-builder / canvas-design / theme-factory / webapp-testing | 来自 anthropics/skills，该仓无开源许可证，仅授权在 Anthropic 服务内使用 |
+| pdf / xlsx / docx / powerpoint | 同上，LICENSE.txt 为 Anthropic 专有条款（"governed by your agreement with Anthropic"） |
+| lieflat-gongwen | PolyForm Noncommercial 1.0.0，非 MIT/Apache/BSD 白名单许可 |
+| academic-paper-reviewer | 无 LICENSE 文件、无明确来源，无法确认可否再分发 |
+| agent-reach | 上游未附许可证（README 亦标注"见原仓库"） |
 
-### cad-designer —— CAD 设计指导 v1.1.0（自研）
-国标制图规范、图层/标注标准、参数化设计思路、批量出图策略、设计检查清单。管"怎么设计才对"，不写代码——与 cad-automation 是"设计师 + 程序员"分工。
+**2. 个人/私人技能（含身份、凭据、私人库路径或私人工作流）**
 
-## skills/design/ —— 设计与视觉
+| 技能 | 原因 |
+| --- | --- |
+| mood / companion | 个人情绪与关系状态层，运行时含私人日记 |
+| feishu-group | 往私人飞书群发消息，凭据走本机 env |
+| skill-router | 指向本机技能库绝对路径与个人分拣偏好 |
+| obsidian-vault | 直接读写私人笔记库绝对路径 |
+| dafeiyu-bilibili / dafeiyu-organs | 个人桌宠人格与账号运营脚本 |
+| minimax-code-imagegen | 绑定本机桌面应用与本地控件坐标 |
+| beautiful-article | 正文含本机绝对路径与个人工作流约定 |
 
-### ui-ux-pro-max —— UI/UX 设计主技能（MIT）
-专业级 UI/UX 设计智能：界面设计决策、审美约束、多平台适配。
-来源：[nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) · MIT
+**3. 已退役件（私有主库中为 `SKILL.md.disabled`，共 50 个，其中 43 个是 2026-10-31 归档的）**
 
-### banner-design —— 横幅/营销图（MIT）
-同上仓库的子技能：横幅与营销视觉设计。
-**用途/触发**：做 banner、封面图、营销素材。
+退役技能不公开：它们不进任何 agent 的技能列表，公开只会误导使用者。因此本镜像也没有
+cad-automation、cad-designer、ponytail、ttc-cad、ttc-dxf、arxiv、deep-research、docx、
+powerpoint、xlsx、json-canvas、humanizer、markdown-viewer 等。
 
-### slides —— 幻灯片/课件（MIT）
-同上仓库的子技能：幻灯片与课件设计。
-**用途/触发**：做演示文稿、教学课件。
-
-### archify —— 可验证的图表（MIT）
-生成**可验证**的架构图/工作流图/时序图/数据流图/生命周期图：自包含 HTML、带动效、可导出；自带渲染器、布局修复与校验脚本（需本地 Node.js）。
-来源：[tt-a1i/archify](https://github.com/tt-a1i/archify) · MIT
-
-### scroll-craft —— 滚动叙事落地页（MIT，选择性调用）
-高端滚动驱动网页：先规划访客旅程、页面文法、情绪峰值和"专属签名动效"，再做带独立视觉层的三维 Hero、克制的动效、独立的移动端构图。支持用现有照片/视频素材或生成写实素材。
-**⚠️ 选择性调用**——只用于：营销主页、产品发布页、作品集、餐饮/服务品牌页这类"要讲故事"的页面。普通后台、文档页、表单页**不要**叫它，普通的用 ui-ux-pro-max 就够。
-来源：[nateherkai/scroll-craft](https://github.com/nateherkai/scroll-craft) · MIT
+例外说明：`gongwen-gbt9704` 是独立 git 仓库（MIT），不在私有主库内，故不随本镜像分发，请直接取上游。
 
 ## docs/ —— 实战蒸馏
 
@@ -104,4 +105,4 @@ MCP 生态速查：[registry.modelcontextprotocol.io](https://registry.modelcont
 
 ## License
 
-本仓库自身代码 MIT。第三方技能遵循其原仓库许可证（见各技能标注，其中 lieflat-gongwen 为 PolyForm 非商业许可证），版权归原作者。
+本仓库自身代码 MIT。第三方技能遵循其原仓库许可证，版权归原作者（各技能目录内保留原 LICENSE）。

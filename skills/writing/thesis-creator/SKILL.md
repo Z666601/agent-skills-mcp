@@ -1,6 +1,6 @@
 ---
 name: thesis-creator
-description: 面向中国本科生的毕业论文全流程写作辅助系统。支持从选题到交稿的端到端工作流，包含降重优化、AIGC 降低和本地检测功能。用户说「帮我写论文」或「帮我降重」等时触发。
+description: "面向中国本科生的毕业论文全流程写作辅助系统。支持从选题到交稿的端到端工作流，包含降重优化、AIGC 降低和本地检测功能。用户说「帮我写论文」或「帮我降重」等时触发。"
 ---
 
 # 论文创作 Agent 系统
@@ -12,7 +12,12 @@ description: 面向中国本科生的毕业论文全流程写作辅助系统。�
 ## 核心原则
 
 > [!IMPORTANT]
-> **工作区隔离原则**：AI 始终在用户项目目录下的 `thesis-workspace/` 工作。所有产出文件都在用户工作区内。
+> **工作区隔离原则**：工作区根固定在 `C:\Users\<user>\桌面文件\thesis-workspace\`（用户桌面根 `C:\Users\<user>\桌面文件\` + 原有子目录名 `thesis-workspace/`）。所有产出文件都在这个工作区内，不写到技能目录、也不写进别的项目目录；下文的相对路径 `thesis-workspace/` 一律指这个绝对路径。
+>
+> **三条红线**：
+> 1. **未执行就写「未执行」**：没真跑的步骤必须标明「未执行」并给出可复现命令，不许含糊报成功。
+> 2. **先机检再报完成**：交付物（终稿 Markdown / docx / `images.yaml`）先跑对应机检脚本（`scripts/charts/validate.py`、`scripts/content/format_checker.py`、`scripts/core/lifecycle.py --check-workspace`）拿到通过结果，再报完成。
+> 3. **不编数据、不编引用**：文献、DOI、表结构、统计数字都必须有真实来源；查不到就删条目或把结论降级，禁止用"看起来合理"的内容填空。
 
 ---
 
@@ -140,7 +145,7 @@ flowchart LR
 ## 用户工作区目录结构
 
 ```
-thesis-workspace/
+C:\Users\<user>\桌面文件\thesis-workspace\
 ├── README.md                  # 工作区使用说明
 ├── .thesis-config.yaml        # 配置文件
 ├── references/                # 参考资料（用户放入）

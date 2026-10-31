@@ -6,7 +6,7 @@ when_to_use: 用户提到技能太多/管理技能/审计技能/清理技能/技
 
 # 技能审计与管理（asm 包装）
 
-前置事实：asm v2.18.0 已通过 `npm install -g agent-skill-manager` 装好；配置（`asm config path` 查看）里 hermes provider 已指向本机真实目录 `<本机 Hermes 技能目录>`。asm 扫描覆盖：Hermes 顶层技能 26 个 + 通用 `.agents/skills`（如 agent-reach、本技能）。
+前置事实：asm v2.18.0 已通过 `npm install -g agent-skill-manager` 装好；配置（`asm config path` 查看）里 hermes provider 已指向本机真实目录 `%USERPROFILE%/AppData/Local/hermes/skills`。asm 扫描覆盖：Hermes 顶层技能 26 个 + 通用 `.agents/skills`（如 agent-reach、本技能）。
 
 ## 按需求选命令
 
@@ -28,7 +28,7 @@ when_to_use: 用户提到技能太多/管理技能/审计技能/清理技能/技
 
 ## 红线（都有原因）
 
-- **绝不触碰 ZCode 官方插件缓存** `<ZCode 官方插件缓存目录>`——那里的技能由 ZCode 插件系统管理（启用/禁用走插件开关），asm 改动会破坏插件完整性检查。
+- **绝不触碰 ZCode 官方插件缓存** `C:\Users\<user>\.zcode\cli\plugins\cache`——那里的技能由 ZCode 插件系统管理（启用/禁用走插件开关），asm 改动会破坏插件完整性检查。
 - `disable` 的原理是把 SKILL.md 改名为 SKILL.md.disabled，目录保留、完全可逆——所以"删掉"需求也先用 disable 实现，真删除让用户自己 `asm uninstall`。
 - 配置里 `customPaths` 保持为空：该功能在 Windows 上有 bug（数组或对象格式都会让 `asm list` 崩溃，v2.18.0 实测）。
 - Hermes 索引约 115 个技能（含嵌套子技能），asm 只能看到顶层目录；嵌套技能属于其父技能的一部分，不单独处理。

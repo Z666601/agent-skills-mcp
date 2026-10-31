@@ -1,18 +1,6 @@
 ---
 name: scroll-craft
-description: >
-  Build premium scroll-driven landing pages for service, product, food, and
-  drink brands. Plan the visitor journey, page grammar, emotional peak, and
-  bespoke signature move. Create dimensional heroes with independent visual
-  planes, restrained motion, and separate mobile composition. Use supplied
-  photos and footage or generate photoreal assets through kie.ai, write semantic
-  HTML, and verify desktop, mobile, and reduced-motion scroll states visually.
-  Use for "scrollcraft", "scroll craft", "layered hero", "premium hero",
-  "cinematic hero", "scrollytelling", "scroll animation site", "a site where
-  scrolling plays a video", "Apple-style landing page", "3D scroll world",
-  "interactive landing page", "make my brand a scroll experience", "this looks
-  like a template", or requests for a distinctive website that feels like an
-  experience rather than a document.
+description: "Build premium scroll-driven landing pages (visitor journey, signature move, dimensional hero, restrained motion, separate mobile composition). Use for \"scrollcraft\", \"scroll craft\", \"scrollytelling\", \"layered/premium/cinematic hero\", \"scroll animation site\", \"site where scrolling plays a video\", \"Apple-style landing page\", \"3D scroll world\", \"interactive landing page\", \"make my brand a scroll experience\", \"this looks like a template\", or any distinctive experience-not-document site."
 allowed-tools: Bash, Read, Write, Edit, Glob, Grep, AskUserQuestion
 ---
 
